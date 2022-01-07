@@ -210,10 +210,11 @@ The initial imported plugins file can be
 
 ### Support file
 
-By default Cypress will automatically include the support file
-`cypress/support/index.js`. This file runs **before** every single spec file. We
-do this purely as a convenience mechanism so you don't have to import this file
-in every single one of your spec files.
+By default Cypress will automatically include the
+[supportFile](/guides/core-concepts/writing-and-organizing-tests#Support-file).
+This file runs **before** every single spec file. We do this purely as a
+convenience mechanism so you don't have to import this file in every single one
+of your spec files.
 
 <Alert type="danger">
 
@@ -264,8 +265,8 @@ click on a test file named `spec-a.js` via
 executes the files in the following order:
 
 ```html
-<!-- bundled support file -->
-<script src="support/index.js"></script>
+<!-- bundled e2e or component support file -->
+<script src="support/e2e.js"></script>
 <!-- bundled spec file -->
 <script src="integration/spec-a.js"></script>
 ```
@@ -281,8 +282,8 @@ shown below. This means the code in the support file is executed once before all
 spec files, instead of once before each spec file.
 
 ```html
-<!-- bundled support file -->
-<script src="support/index.js"></script>
+<!-- bundled e2e or component support file -->
+<script src="support/e2e.js"></script>
 <!-- bundled first spec file, second spec file, etc -->
 <script src="integration/spec-a.js"></script>
 <script src="integration/spec-b.js"></script>
