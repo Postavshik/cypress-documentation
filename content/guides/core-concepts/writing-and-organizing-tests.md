@@ -63,7 +63,7 @@ folder structure. By default it will create:
 
   /support
     - commands.js
-    - index.js
+    - e2e.js
 ```
 
 ### Configuring Folder Structure
@@ -210,11 +210,23 @@ The initial imported plugins file can be
 
 ### Support file
 
-By default Cypress will automatically include the
-[supportFile](/guides/core-concepts/writing-and-organizing-tests#Support-file).
-This file runs **before** every single spec file. We do this purely as a
-convenience mechanism so you don't have to import this file in every single one
-of your spec files.
+By default Cypress will automatically include the supportFile. This file runs
+**before** every single spec file. We do this purely as a convenience mechanism
+so you don't have to import this file in every single one of your spec files.
+
+<Alert type="info">
+
+<strong class="alert-header"><Icon name="cogs"></Icon> Support File Per Test
+Type</strong>
+
+Depending on which [test type](/guides/overview/choosing-testing-type) you're
+using, there are two possible supportFiles. Each type has their own
+configuration.
+
+- [e2e.js](/guides/references/configuration#e2e)
+- [component.js](/guides/references/configuration#component)
+
+</Alert>
 
 <Alert type="danger">
 
